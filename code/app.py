@@ -1,4 +1,15 @@
 
+# Flask tutorial http://flask.pocoo.org/docs/0.10/
+# http://lesson-flask-124420.nitrousapp.com:5000/
+# https://developer.mozilla.org/en-US/docs/Web/HTML
+
+# Running the server from the console below
+# $ cd
+# $ . ./venv/bin/activate
+# $ cd code
+# $ python app.py
+# Click Preview ^^ and click the "Port 5000" option
+
 from flask import Flask
 from flask import request
 from flask import session
