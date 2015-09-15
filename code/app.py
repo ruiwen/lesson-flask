@@ -10,6 +10,8 @@
 # $ python app.py
 # Click Preview ^^ and click the "Port 5000" option
 
+import json
+
 from flask import Flask
 from flask import request
 from flask import session
@@ -24,11 +26,51 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def index():
-    return 'hello world woot woot'
+#     query_params = request.args
+    return 'goodbyet'
 
 @app.route('/<name>')
 def name(name):
-    return 'hello {name:s}'.format(name=name)
+    return render_template('index.html', text='howdy {name:s}'.format(name=name))
+
+@app.route('/submission/', methods=['GET', 'POST'])
+def submission():
+
+    if request.method == 'GET':
+        return render_template('submission_form.html')
+
+    else:
+        params = request.form.to_dict(flat=True)
+
+        if params.get('name'):
+            session['name'] = params.get('name')
+
+        meta = {
+            'method': request.method,
+            'session': session
+        }
+        headers = "\n".join(["{:>30}  {:<20}".format(k, v) for k, v in request.headers.iteritems()])
+        print headers
+
+        return render_template('data.html', params=json.dumps(params, indent=2), meta=meta, headers=headers)
+
+@app.route('/get-submission/', methods=['GET'])
+def get_submission():
+
+    params = request.form.to_dict(flat=True)
+
+    if params.get('name'):
+        session['name'] = params.get('name')
+
+    meta = {
+        'method': request.method,
+        'session': session
+    }
+    headers = "\n".join(["{:>30} {:<20}".format(k, v) for k, v in request.headers.iteritems()])
+    print headers
+
+    return render_template('data.html', params=json.dumps(params, indent=2), meta=meta, headers=headers)
+
 
 
 if __name__ == '__main__':

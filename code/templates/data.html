@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Params</h2>
+<pre>
+{{ params }}
+</pre>
+
+<h2>Meta</h2>
+{# Learn how templating and filters work! #}
+{# http://jinja.pocoo.org/docs/dev/templates/#list-of-builtin-filters #}
+<pre>
+{{ meta | pprint }}
+</pre>
+
+<h2>Headers</h2>
+<pre>
+{{ headers }}
+</pre>
+
+{% endblock content %}

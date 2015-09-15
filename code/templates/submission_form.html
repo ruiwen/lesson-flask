@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{# All about forms! #}
+{# https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms #}
+<h2>Form</h2>
+<form name='theform' method='POST' action='/submission/'>
+<!-- <form name='theform' method='GET' action='/get-submission/'> -->
+
+    <section>
+        <label for='name_field'> Name </label>
+        <input id='name_field' type='text' name='name' placeholder='Enter your name' />
+    </section>
+
+    <section>
+        <label for='human_field'> Human </label>
+        <input id='human_field' type='checkbox' name='human' />
+    </section>
+
+    <section>
+        <label for='password_field'> Password </label>
+        <input id='password_field' type='password' name='password' placeholder='Password here' />
+    </section>
+
+    <section>
+        <input type='submit' value='Submit'>
+        <button type='submit'>Submit Button</button>
+    </section>
+
+</form>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Sample App</title>
+    <meta name="description" content="">
+
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style sheet link -->
+    <link href="/static/css/style.css" rel="stylesheet" media="all">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    {% block css %}{% endblock css %}
+
+  </head>
+  <body>
+    {% block content %}
+    {% endblock content %}
+
+    {% block js %}{% endblock js %}
+  </body>
+</html>
