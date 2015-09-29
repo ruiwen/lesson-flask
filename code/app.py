@@ -71,6 +71,27 @@ def get_submission():
 
     return render_template('data.html', params=json.dumps(params, indent=2), meta=meta, headers=headers)
 
+@app.route('/interactive/', methods=['GET', 'POST'])
+def interactive():
+
+    if request.method == 'GET':
+        return render_template('interactive_form.html')
+
+    else:
+        params = request.form.to_dict(flat=True)
+
+        if params.get('name'):
+            session['name'] = params.get('name')
+
+        meta = {
+            'method': request.method,
+            'session': str(session)
+#             'session': session
+        }
+        headers = "\n".join(["{:>30}  {:<20}".format(k, v) for k, v in request.headers.iteritems()])
+        print headers
+
+        return json.dumps({"params": params, "meta": meta, "headers": headers}, indent=2)
 
 
 if __name__ == '__main__':
