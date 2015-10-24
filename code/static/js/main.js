@@ -12,10 +12,8 @@ $(document).ready(function() {
     // at the point this script is loaded
     $('form').submit(function (evt) {
         evt.preventDefault();
-
-//         alert("submitted!");
-
-//         return false;
+        alert("submitted!");
+        return false;
 
         // http://api.jquery.com/jQuery.ajax/
         $('#results pre').text('');

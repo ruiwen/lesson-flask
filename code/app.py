@@ -93,6 +93,14 @@ def interactive():
 
         return json.dumps({"params": params, "meta": meta, "headers": headers}, indent=2)
 
+@app.route('/styling/', methods=['GET'])
+def styling():
+    return render_template('styling.html')
+
+@app.route('/styling/material/', methods=['GET'])
+def styling_material():
+    return render_template('styling-material.html')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, use_reloader=True, use_debugger=app.config['DEBUG'])

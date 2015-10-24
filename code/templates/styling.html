@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference */
+
+</style>
+{% endblock css %}
+
+{% block content %}
+<h1>Hello there!</h1>
+
+<section id="food">
+    <header>
+        <h2>My favourite foods</h2>
+    </header>
+
+    <div>
+        <h3>Breakfast</h3>
+
+        <ul class="breakfast foods">
+            <li>Eggs</li>
+            <li>Orange juice</li>
+            <li>Prataaaaa</li>
+        </ul>
+
+        <label for="order">Order?</label>
+        <input type='text' placeholder="What's your order?">
+
+        <button>Press me</button>
+        
+    </div>
+</section>
+
+<section id="info">
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">This</a> is a great <abbr title="Cascading Style Sheets">CSS</abbr> reference</p>
+</section>
+
+<section id="demo">
+    <h3>Display demo</h3>
+    <div>This is the first box</div>
+    <div>This is the second box</div>
+</section>
+
+<section id="float">
+    <h3>Float demo</h3>
+    <p>Can't float this</p>
+    <ul>
+        <li>#yolo</li>
+        <li>#bff4eva</li>
+        <li>#squadgoals</li>
+    </ul>
+    <p>This thing ain't floating</p>
+</section>
+{% endblock content %}

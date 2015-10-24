@@ -9,12 +9,17 @@
 <form name='theform' method='POST' action='/submission/'>
 <!-- <form name='theform' method='GET' action='/get-submission/'> -->
 
-    <section>
+    <section class="person">
         <label for='name_field'> Name </label>
         <input id='name_field' type='text' name='name' placeholder='Enter your name' onchange="nameChange()" />
     </section>
 
     <section>
+        <label for="telephone_field"> Phone </label>
+        <input id='telephone_field' type='tel' name='tel' placeholder='Telephone'>
+    </section>
+
+    <section class="human">
         <label for='human_field'> Human </label>
         <input id='human_field' type='checkbox' name='human' />
     </section>
@@ -31,7 +36,7 @@
     <div id="results">
         <pre></pre>
     </div>
-    
+
 </form>
 
 {% endblock content %}

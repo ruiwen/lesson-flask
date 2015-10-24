@@ -1,0 +1,69 @@
+{% extends 'base-material.html' %}
+
+{% block content %}
+<h1>Hello there!</h1>
+
+<section id="food">
+    <header>
+        <h2>My favourite foods</h2>
+    </header>
+
+    <div>
+        <h3>Breakfast</h3>
+
+        <ul class="breakfast foods">
+            <li>Eggs</li>
+            <li>Orange juice</li>
+            <li>Prataaaaa</li>
+        </ul>
+
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="order" />
+            <label class="mdl-textfield__label" for="order">Order?</label>
+          </div>
+        </form>
+
+        <!-- Raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Press me
+        </button>
+        <!-- More buttons -->
+        <!-- http://www.getmdl.io/components/index.html#buttons-section -->
+    </div>
+</section>
+
+<section id="info">
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">This</a> is a great <abbr id='abbr-css'>CSS</abbr> reference</p>
+    <div class="mdl-tooltip" for="abbr-css">Cascading Style Sheets</div>
+</section>
+
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+        <a href="#demo" class="mdl-tabs__tab is-active">Demo</a>
+        <a href="#float" class="mdl-tabs__tab">Float Demo</a>
+    <!--       <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a> -->
+    </div>
+
+    <div class="mdl-tabs__panel is-active" id="demo">
+        <h3>Display demo</h3>
+        <div>This is the first box</div>
+        <div>This is the second box</div>
+    </div>
+
+    <div class="mdl-tabs__panel"  id="float">
+        <h3>Float demo</h3>
+        <p>Can't float this</p>
+        <ul>
+            <li>#yolo</li>
+            <li>#bff4eva</li>
+            <li>#squadgoals</li>
+        </ul>
+        <p>This thing ain't floating</p>
+    </div>
+
+
+</div>
+
+{% endblock content %}

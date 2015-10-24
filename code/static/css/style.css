@@ -2,3 +2,37 @@
 h1 {
   font-family: Lato, sans-serif;
 }
+
+#demo div {
+    border: 2px solid red;
+    background-color: #dedede;
+    display: inline; /* inline-block */ /* block */
+    width: 200px;
+}
+
+#demo div:nth-child(2) {
+/*     padding: 10px; */
+}
+
+#demo div:last-child {
+/*     background-color: red;
+    opacity: 0.5; */
+}
+
+
+#float ul {
+/*     background-color: #ffddee; */
+    padding: 0px 15px 0px 40px;
+}
+
+#float ul li {
+/*     background-color: rgba(34, 102, 136, 0.5); */
+/*     color: white; */
+    font-size: 30px;
+/*     padding: 5px; */
+/*     display: block; */
+/*     display: inline;  */
+/*     display: inline-block; */
+/*     float: left; */
+/*     float: right; */
+}
